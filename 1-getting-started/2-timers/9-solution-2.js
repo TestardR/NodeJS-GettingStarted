@@ -1,4 +1,5 @@
-let lastIntervalId, counter = 5;
+let lastIntervalId,
+  counter = 5;
 
 const greeting = delay => {
   if (counter === 5) {
