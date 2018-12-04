@@ -1,4 +1,18 @@
 const EventEmitter = require('events');
 
+const myEmitter = new EventEmitter();
+
+setTimeout(() => {
+  myEmitter.emit('TEST_EVENT');
+}, 1000);
+
+setImmediate(() => {
+  myEmitter.emit('TEST_EVENT');
+});
+
+myEmitter.on('TEST_EVENT', () => {
+  console.log('TEST_EVENT was fired');
+});
+
 // Streams are Event Emitters
 // process.stdin, process.stdout
