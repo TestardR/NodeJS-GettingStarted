@@ -1,3 +1,6 @@
+// run : node --inspect-brk 4-bug.js
+// then go to chrome://inspect
+
 function convertArrayToObject(arr) {
   return arr.reduce((curr, acc) => {
     acc[curr[0]] = curr[1];
@@ -10,7 +13,7 @@ const obj = convertArrayToObject([
   [2, 'Two'],
   [3, 'Three'],
   [4, 'Four'],
-  [5, 'Five'],
+  [5, 'Five']
 ]);
 
 console.log(obj);
